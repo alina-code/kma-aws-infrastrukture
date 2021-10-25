@@ -1,1 +1,1 @@
-# kma-aws-infrastrakture
+# kma-aws-infrastrukture

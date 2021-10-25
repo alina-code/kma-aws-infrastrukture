@@ -1,0 +1,1 @@
+# kma-aws-infrastrakture

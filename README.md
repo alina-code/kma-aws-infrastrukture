@@ -7,7 +7,7 @@ aws ec2 create-vpc
 	--tag-specifications ResourceType=vpc,Tags=[{Key=Name,Value=kma-genesis},{Key=Lesson,Value=public-clouds}] 
 	--query Vpc.VpcId --output text
 	
-#vpc-id should be pasted from the result above
+# vpc-id should be pasted from the result above
  
 # create 3 subnets for vcp
 aws ec2 create-subnet --vpc-id=vpc-0ed35092cf8277691 --cidr-block 10.10.1.0/24
@@ -20,7 +20,7 @@ aws ec2 create-security-group
 		--description "security group for kma-genesis instance" 
 		--vpc-id  vpc-0ed35092cf8277691
 		
-#security-group-id is pasted from results above
+# security-group-id is pasted from results above
 aws ec2 authorize-security-group-ingress --group-id sg-0403aca8dc2526a6d --protocol tcp  --port 22  --cidr 0.0.0.0/0        
 aws ec2 authorize-security-group-ingress --group-id sg-0403aca8dc2526a6d --protocol tcp  --port 80  --cidr 0.0.0.0/0        
 aws ec2 authorize-security-group-ingress --group-id sg-0403aca8dc2526a6d --protocol tcp  --port 443  --cidr 0.0.0.0/0        
